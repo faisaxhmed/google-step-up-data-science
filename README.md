@@ -8,41 +8,44 @@
 
 ## The Brief
 
-Help Google plan a $10M multi-market campaign to drive Gemini Pro sign-ups among university students. The dataset contained brand lift studies across multiple markets and channels — the challenge was to figure out which results were actually meaningful before building any strategy on top of them.
+Help Google plan a $10M multi-market, 8-week digital campaign to drive Gemini Pro sign-ups among university students across 3 markets. The task was to analyse historic campaign performance and brand lift data to identify what had driven success with this audience, then translate those insights into a data-driven campaign strategy.
 
 ---
 
 ## What I Did
 
-### Step 1 — Statistical Validation
-Most people treat statistical significance like a checkbox. I didn't.
+### Step 1 — Statistical Significance Testing
+Before building any strategy, I validated which brand lift studies were genuinely meaningful. I built a Python pipeline using `statsmodels` to run proportion z-tests across all 48 brand lift studies, filtering down to 40 statistically significant results. The 8 studies that failed the threshold were excluded — building strategy on unvalidated lift data produces fiction, not insight.
 
-Before touching any strategy, I built a Python pipeline to run proportion z-tests across every brand lift study in the dataset — separating genuine signal from noise. Studies that looked impressive on paper but didn't clear the significance threshold were flagged and excluded. Every insight built on top of unvalidated data is fiction.
+### Step 2 — Historic Campaign Analysis
+Analysed campaign performance across markets and channels to calculate CPA, CPM, and conversion rate. Identified which market and channel combinations drove the most efficient results historically.
 
-### Step 2 — Cost Efficiency Analysis
-Joined the validated lift data back to campaign spend to calculate **Cost Per Lifted User** across markets and channels — a metric that cuts through vanity numbers and shows where budget actually moves the needle.
+### Step 3 — Cost Per Lifted User (CPLU)
+Joined the validated brand lift data back to historic spend using a composite join key across Campaign, Market, and Channel. Calculated CPLU — spend divided by number of lifted users — to identify the most cost-efficient campaigns for influencing student consideration.
 
-### Step 3 — Strategic Recommendations
-Used the validated, cost-adjusted data to identify:
-- Which creatives genuinely moved consideration
-- Which channels delivered the most efficient reach
-- Which markets offered the best return on spend
+### Step 4 — Creative Analysis
+Filtered creative performance data for the 18-24 target audience and ranked creatives by consideration lift across markets and channels.
 
 ---
 
-## Key Learning
+## Key Findings
+*Based on simulated datasets provided as part of the challenge.*
 
-The field you apply data science in changes. The thinking doesn't. Statistical rigour isn't a step you do at the end — it's the foundation everything else is built on.
+- Filtered 48 brand lift studies down to 40 statistically significant results — 8 studies were excluded for failing the significance threshold
+- EG and SA Search delivered the lowest CPA at ~$3.23, compared to $120+ for UK and DE Display
+- ExamPrep_23 on YouTube in SA achieved the lowest CPLU, making it the most cost-efficient campaign for influencing student consideration
+- Display channels failed significance testing in most markets and should be deprioritised
+- "Life Hack" creative drove the highest consideration lift among 18-24s — strongest in Germany via Social
 
 ---
 
 ## Files
-- [`Notebook`](https://github.com/faisaxhmed/google-step-up-data-science/blob/main/Google%20Step%20Up%20Challenge%20Faisa%20Ahmed.ipynb) — full Python pipeline including z-tests, spend joins, and Cost Per Lifted User calculations
-- [`Presentation`](https://github.com/faisaxhmed/google-step-up-data-science/blob/main/Google%20Step%20Up%20Career%20Challenge.pptx) — final strategic recommendations presented to the challenge
+- [`Notebook`](https://github.com/faisaxhmed/google-step-up-data-science/blob/main/Google%20Step%20Up%20Challenge%20Faisa%20Ahmed.ipynb) — full Python pipeline including z-tests, dataset joins, and CPLU calculations
+- [`Presentation`](https://github.com/faisaxhmed/google-step-up-data-science/blob/main/Google%20Step%20Up%20Career%20Challenge.pptx) — final strategic recommendations
 
 ---
 
 ## Tech
-- Python, Pandas, NumPy, SciPy
+- Python, Pandas, NumPy, SciPy, Statsmodels
 - Proportion z-tests
 - Jupyter Notebook
