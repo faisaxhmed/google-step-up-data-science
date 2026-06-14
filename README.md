@@ -2,7 +2,7 @@
 
 **Organiser:** The Data Inspiration Group  
 **Track:** Data Science  
-**Certificate:** [View Certificate](#) 
+**Certificate:** [View Certificate](https://github.com/faisaxhmed/google-step-up-data-science/blob/main/Google%20Step%20Up%20Work%20Experience%20Certificate_cropped.pdf)
 
 ---
 
@@ -37,8 +37,8 @@ The field you apply data science in changes. The thinking doesn't. Statistical r
 ---
 
 ## Files
-- `.ipynb` — full Python pipeline including z-tests, spend joins, and Cost Per Lifted User calculations
-- `.pdf` — final strategic recommendations presented to the challenge
+- [`Notebook`](https://github.com/faisaxhmed/google-step-up-data-science/blob/main/Google%20Step%20Up%20Challenge%20Faisa%20Ahmed.ipynb) — full Python pipeline including z-tests, spend joins, and Cost Per Lifted User calculations
+- [`Presentation`](https://github.com/faisaxhmed/google-step-up-data-science/blob/main/Google%20Step%20Up%20Career%20Challenge.pptx) — final strategic recommendations presented to the challenge
 
 ---
 
